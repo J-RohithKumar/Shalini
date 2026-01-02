@@ -56,5 +56,5 @@ EXPOSE 8000 5432 3000
 CMD service postgresql start && \
     python3 -m uvicorn backend.run_service:app --host 0.0.0.0 --port 8000 & \
     cd frontend && npm start & \
-    if [ -f "/app/java/app.jar" ]; then java -jar /app/java/app.jar; else echo "Java JAR not found, skipping Java service"; fi
+    java -jar /app/java/app.jar
 
