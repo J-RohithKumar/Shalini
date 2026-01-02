@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"> <!-- default to dark (change to light if you prefer) -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Run Python / Java / JavaScript / PostgreSQL</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>WriteRight</h1>
+    <!-- You may keep this area clean; the toggle is fixed to the right of the screen -->
+  </header>
+
+  <main>
+    <div class="controls">
+      <label for="language">Language</label>
+      <select id="language">
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+        <option value="javascript">JavaScript (Node)</option>
+        <option value="postgres">PostgreSQL</option> <!-- IMPORTANT -->
+      </select>
+
+      <label for="code">Code</label>
+      <textarea id="code" placeholder="Write your code here..."></textarea>
+
+      <label for="input">stdin input (optional)</label>
+      <textarea id="input" placeholder="Input provided to program via stdin..."></textarea>
+
+      <button id="runBtn">Run</button>
+    </div>
+
+    <div class="results">
+      <h2>Result</h2>
+      <div class="status" id="status">Idle</div>
+      <div class="io">
+        <div>
+          <h3>stdout</h3>
+          <pre id="stdout"></pre>
+        </div>
+        <div>
+          <h3>stderr</h3>
+          <pre id="stderr"></pre>
+        </div>
+      </div>
+      <div class="meta" id="meta"></div>
+    </div>
+  </main>
+
+  <!-- Floating theme toggle (pinned to the right side of the screen) -->
+  <button id="themeToggle" aria-label="Toggle color theme" title="Toggle theme">🌙 Dark</button>
+
+  <script src="/script.js"></script>
+</body>
+</html>
