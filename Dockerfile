@@ -40,7 +40,11 @@ RUN pip install --no-cache-dir -r /app/requirements.txt
 COPY . /app
 
 # Build Java JAR if pom.xml exists
-RUN if [ -f "/app/java/pom.xml" ]; then cd /app/java && mvn clean package -DskipTests; fi
+RUN if [ -f "/app/java/pom.xml" ]; then \
+        cd /app/java && \
+        mvn clean package -DskipTests && \
+        cp target/writeright-java-1.0.0.jar /app/java/app.jar; \
+    fi
 
 # Expose ports:
 # 8000 → FastAPI
