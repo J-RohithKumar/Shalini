@@ -1,0 +1,31 @@
+
+
+
+# --- Python dependencies (pip installable) ---
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+pydantic==2.7.4
+python-multipart==0.0.9
+python-dotenv==1.0.1
+
+# Database drivers (Python)
+psycopg2-binary
+psycopg
+
+# Build tools (Python)
+pip
+wheel
+setuptools
+
+# --- External runtimes (not pip-installable) ---
+# Node.js runtime
+#   Recommended version: Node.js 20+
+#   Manage JS dependencies in package.json (npm/yarn/pnpm)
+#
+# Java Development Kit (JDK)
+#   Recommended version: JDK 17+
+#   Manage Java dependencies in pom.xml (Maven) or build.gradle (Gradle)
+#
+# Python runtime
+#   Recommended version: Python 3.11+
+#   This requirements.txt covers Python libraries only
